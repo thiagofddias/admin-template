@@ -1,5 +1,5 @@
 import useAuth from "../../data/hook/useAuth"
-import { IconeAjustes, IconeCasa, IconeLogout, IconeSino } from "../icons"
+import { Settings, House, Logout, Bell, Tasks } from "../icons"
 import Logo from "./Logo"
 import MenuItem from "./MenuItem"
 
@@ -11,23 +11,24 @@ export default function MenuLateral() {
         <aside className={`
             flex flex-col
             bg-gray-200 text-gray-700
-            dark:bg-gray-900
+            dark:bg-black
         `}>
             <div className={`
                 flex flex-col items-center justify-center
-                bg-gradient-to-r from-indigo-500 to-purple-800
+                bg-gradient-to-r from-indigo-100 to-purple-100
                 h-20 w-20
             `}>
                 <Logo />
             </div>
             <ul className="flex-grow">
-                <MenuItem url="/" texto="Início" icone={IconeCasa} />
-                <MenuItem url="/ajustes" texto="Ajustes" icone={IconeAjustes} />
-                <MenuItem url="/notificacoes" texto="Notificações" icone={IconeSino} />
+                <MenuItem url="/" texto="Home" icone={House} />
+                <MenuItem url="/tasks" texto="Tasks" icone={Tasks} />
+                <MenuItem url="/settings" texto="Settings" icone={Settings} />
+                <MenuItem url="/notificacoes" texto="Notifications" icone={Bell} />
             </ul>
             <ul>
                 <MenuItem
-                    texto="Sair" icone={IconeLogout} 
+                    texto="Sair" icone={Logout} 
                     onClick={logout}
                     className={`
                         text-red-600 dark:text-red-400
